@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon slayer game</title>
+</head>
+<body>
+    
+    <script>
+        let random = Math.ceil(Math.random()*100);
+        //random number in JS between 0 and 1 (0 included but 1 not included)
+        // Math.ceil() round number up
+        // Math.floor() round number down
+        console.log(random);
+
+        let name = prompt("What is your name?");
+        let play = confirm(`Hello ${name}, Would you like to play?`);
+
+        if (play) {
+            let game = confirm("Would you like to beat the dragon?");
+            if(game) {
+                //start game
+                let result = random > 50? "You defeated the dragon! :)" : "You lost :(";
+                alert(result);
+            }
+            else {
+                //end game
+                alert("Come back when you are ready!");
+            }
+        }
+        else {
+            alert("Maybe next time.");
+        }
+
+    </script>
+</body>
+</html>
